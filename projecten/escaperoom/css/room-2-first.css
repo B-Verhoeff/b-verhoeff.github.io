@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#bg-image {
+  background-image: url(/img/room-2-first.png);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tip-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  height: 50px;
+  width: 120px;
+  font-size: large;
+  cursor: pointer;
+}
+
+#tip-button:hover {
+  height: 55px;
+  width: 130px;
+}
+
+#tip-button:active {
+  border: 1px solid green;
+  filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+}
+
+#door-keypad {
+  position: absolute;
+  top: 57.3%;
+  left: 93.2%;
+  height: 120px;
+  width: 96px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#door-keypad:disabled {
+  cursor: default;
+}
+
+#stack-of-papers {
+  position: absolute;
+  top: 57.2%;
+  left: 32.1%;
+  height: 117px;
+  width: 90px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#notebook {
+  position: absolute;
+  top: 64%;
+  left: 46%;
+  height: 61px;
+  width: 49px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#door {
+  position: absolute;
+  top: 46.7%;
+  left: 77%;
+  height: 515px;
+  width: 292px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#wood {
+  position: absolute;
+  top: 70.5%;
+  height: 268.5px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#pink-pencil {
+  position: absolute;
+  top: 46.4%;
+  left: 18%;
+  height: 7.8px;
+  width: 48px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#white-pencil {
+  position: absolute;
+  top: 46.4%;
+  left: 21.3%;
+  height: 7.8px;
+  width: 48px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#eraser {
+  position: absolute;
+  top: 45%;
+  left: 34.85%;
+  height: 22px;
+  width: 75px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
