@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hoger Lager Dobbelspel</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoger Lager Dobbelspel</h1>
+        <div class="dice-container">
+            <div class="dice">
+                <img id="playerDice" src="images/dobbelsteen-1.png" alt="Speler dobbelsteen">
+            </div>
+            <div class="dice">
+                <img id="computerDice" src="images/dobbelsteen-1.png" alt="Computer dobbelsteen">
+            </div>
+        </div>
+        <button id="startButton">Start het spel</button>
+        <button id="higherButton" disabled>Hoger</button>
+        <button id="lowerButton" disabled>Lager</button>
+        <button id="rollDiceButton" disabled>Gooi dobbelstenen</button>
+        <p>Jij moet kiezen of jouw worp hoger of lager is dan de worp van de computer</p>
+        <p>Jij ziet eerst jouw worp en daarna die van de computer</p>
+        <p id="score">Score: Speler: 100 - Computer: 100</p>
+        <input type="number" id="betInput" class="bet-input" min="1" max="100" step="1" disabled>
+        <button id="placeBetButton" class="bet-button" disabled>Inzetten</button>
+        <p id="resultMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
