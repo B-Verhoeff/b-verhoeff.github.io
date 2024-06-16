@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.card');
-  const cardImages = ["projecten/toughttrack/Kaartjes/Acid.jpg", "toughttrack/Kaartjes/AndrewTate.jpg", "toughttrack/Kaartjes/ElonMusk.jpg", "toughttrack/Kaartjes/Hamza.jpg", "toughttrack/Kaartjes/Iman.jpg", "toughttrack/Kaartjes/JesseJames.png", "toughttrack/Kaartjes/JoeyAK.jpg", "toughttrack/Kaartjes/JordanWelch.jpg", "toughttrack/Kaartjes/KanyeKLAAR.jpg", "toughttrack/Kaartjes/MrBeast.jpg", "toughttrack/Kaartjes/TravisScott.jpg", "toughttrack/Kaartjes/TristanTate.jpg"];
+  const cardImages = ["toughttrack/Kaartjes/Acid.jpg", "toughttrack/Kaartjes/AndrewTate.jpg", "toughttrack/Kaartjes/ElonMusk.jpg", "toughttrack/Kaartjes/Hamza.jpg", "toughttrack/Kaartjes/Iman.jpg", "toughttrack/Kaartjes/JesseJames.png", "toughttrack/Kaartjes/JoeyAK.jpg", "toughttrack/Kaartjes/JordanWelch.jpg", "toughttrack/Kaartjes/KanyeKLAAR.jpg", "toughttrack/Kaartjes/MrBeast.jpg", "toughttrack/Kaartjes/TravisScott.jpg", "toughttrack/Kaartjes/TristanTate.jpg"];
   const backImage = "plaatjes/achterkant.jpg";
 
   let flippedCard = false;
