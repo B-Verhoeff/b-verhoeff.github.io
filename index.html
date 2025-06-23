@@ -1,96 +1,544 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <title>Bram Verhoeff - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="img/logotransparant.png" alt="Logo" style="height: 40px; width: 40px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    <main>
-        <div class="hometitle">Bram Verhoeff</div>
-        <div class="picture"><img src="img/boulderen.png"  width="300px" height="500px" alt=""></div>
-        <article class="hometext">Welcome to my site. My name is Bram Verhoeff and I am enrolled in the Software Developer course at ROC Mondriaan Brasserskade. 
-          Here I learned how to work with different programming languages, including HTML, Javascript and Bootstrap
-        <br>
-        Here I learn to create an application together in a group with the customer's requirements
-    </article>
-    </main>
-</body>
-<footer>
-    <div class="bg-dark py-5 py-xl-8 py-xxl-9">
-      <div class="container overflow-hidden">
-        <div class="row gy-5 gy-md-0 align-items-md-center">
-          <div class="col-xs-12 col-md-7 order-1 order-md-0">
-            <div class="copyright text-center text-md-start text-white">
-              &copy; 2024. All Rights Reserved.
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Bram Verhoeff</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Over Mij</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Vaardigheden</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projecten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#internship">Stage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="credits text-white text-center text-md-start mt-2 fs-8">
-              Made by Bram
-            </div>
-          </div>
-  
-          <div class="col-xs-12 col-md-5 order-0 order-md-1">
-            <div class="social-media-wrapper">
-              <ul class="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-md-end">
-                <li class="me-3">
-                  <a href="https://github.com/B-Verhoeff" class="link-white link-opacity-75-hover">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                      </svg>
-                  </a>
-                </li>
-                <li class="me-3">
-                  <a href="#!" class="link-white link-opacity-75-hover">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-microsoft-teams" viewBox="0 0 16 16">
-                        <path d="M9.186 4.797a2.42 2.42 0 1 0-2.86-2.448h1.178c.929 0 1.682.753 1.682 1.682zm-4.295 7.738h2.613c.929 0 1.682-.753 1.682-1.682V5.58h2.783a.7.7 0 0 1 .682.716v4.294a4.197 4.197 0 0 1-4.093 4.293c-1.618-.04-3-.99-3.667-2.35Zm10.737-9.372a1.674 1.674 0 1 1-3.349 0 1.674 1.674 0 0 1 3.349 0m-2.238 9.488-.12-.002a5.2 5.2 0 0 0 .381-2.07V6.306a1.7 1.7 0 0 0-.15-.725h1.792c.39 0 .707.317.707.707v3.765a2.6 2.6 0 0 1-2.598 2.598z"/>
-                        <path d="M.682 3.349h6.822c.377 0 .682.305.682.682v6.822a.68.68 0 0 1-.682.682H.682A.68.68 0 0 1 0 10.853V4.03c0-.377.305-.682.682-.682Zm5.206 2.596v-.72h-3.59v.72h1.357V9.66h.87V5.945z"/>
-                      </svg>
-                  </a>
-                </li>
-                <li class="me-3">
-                  <a href="https://www.linkedin.com/in/bram-verhoeff-3abb03311/" class="link-white link-opacity-75-hover">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20 " fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                      </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </footer>
-</html>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="animated-text">Hallo, ik ben</span><br>
+                            <span class="name-animation">Bram Verhoeff</span>
+                        </h1>
+                        <p class="hero-subtitle">17-jarige Developer & Programmer</p>
+                        <div class="hero-description">
+                            <p>Passie voor programmeren en het creëren van innovatieve oplossingen. 
+                            Ik ben altijd bezig met het leren van nieuwe technologieën en het ontwikkelen van mijn vaardigheden.</p>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg">Bekijk Mijn Werk</a>
+                            <a href="#internship" class="btn btn-outline-light btn-lg ms-3">Stage Gezocht</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="code-animation">
+                            <div class="code-line">function createPortfolio() {</div>
+                            <div class="code-line indent">const skills = ['PHP', 'HTML', 'CSS', 'Java'];</div>
+                            <div class="code-line indent">const passion = '∞';</div>
+                            <div class="code-line indent">return 'Amazing Portfolio';</div>
+                            <div class="code-line">}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Over Mij</h2>
+                    <div class="about-content">
+                        <p class="lead">
+                            Ik ben Bram Verhoeff, een 17-jarige developer met een passie voor programmeren en technologie. 
+                            Mijn reis in de wereld van software development begon met een nieuwsgierigheid naar hoe dingen werken 
+                            en is uitgegroeid tot een echte passie.
+                        </p>
+                        <p>
+                            Ik ben constant bezig met het leren van nieuwe programmeertalen en frameworks. 
+                            Mijn doel is om innovatieve en gebruiksvriendelijke applicaties te ontwikkelen die 
+                            echte problemen oplossen en mensen helpen.
+                        </p>
+                        <div class="stage-notice">
+                            <div class="stage-badge">
+                                <i class="fas fa-search"></i>
+                                <span>Op zoek naar een stagebedrijf</span>
+                            </div>
+                        </div>
+                        <div class="about-stats">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="stat-item">
+                                        <h3>7</h3>
+                                        <p>Programmeertalen</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-item">
+                                        <h3>17</h3>
+                                        <p>Jaar Jong</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-item">
+                                        <h3>∞</h3>
+                                        <p>Passie voor Code</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title text-center">Mijn Vaardigheden</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="skills-container">
+                        <!-- PHP Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-php"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>PHP (Symfony)</h4>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- HTML Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>HTML (Bootstrap)</h4>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- CSS Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>CSS</h4>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- Java Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- Linux Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-linux"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Linux</h4>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <!-- Python Skill -->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 30%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title text-center">Mijn Projecten</h2>
+            <div class="row">
+                <!-- Webcatalogus De Brave Bakkers -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Webcatalogus De Brave Bakkers</h3>
+                            <p>Een webcatalogus voor een bakkerij met productbeheer, bestelsysteem en klantportaal. 
+                            Volledig responsive design met moderne UI/UX principes.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Symfony</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ROCMondriaanTIN/sd23-p03-project-webcatalogus-de-brave-bakkers" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Bekijk Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build a Game -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Build a Game</h3>
+                            <p>Een interactieve game ontwikkeld met moderne game development technieken. 
+                            Bevat physics engine, sprite animaties en een level editor systeem.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">JavaFX</span>
+                                <span class="tech-tag">OOP</span>
+                                <span class="tech-tag">Game Dev</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ROCMondriaanTIN/sd23-p02-project-build-a-game-bram" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Bekijk Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Project -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Dashboard Bram</h3>
+                            <p>Een interactief dashboard met real-time data visualisatie en analytics. 
+                            Bevat verschillende widgets, grafieken en een responsive layout.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Charts.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ROCMondriaanTIN/sd23-p04-project-dashboard-dashboardbram" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Bekijk Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escape Room -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Escape Room B1J</h3>
+                            <p>Een digitale escape room game met puzzels, hints en een timer systeem. 
+                            Interactieve elementen en een spannende game-ervaring.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Game Logic</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ROCMondriaanTIN/sd23-p02-escaperoom-b1j-dbr" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Bekijk Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Sopranos -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ultra Pizza Sopranos</h3>
+                            <p>Een pizza bestelsysteem met menu management, bestelverwerking en klantbeheer. 
+                            Volledig functionele web applicatie voor een pizzeria.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">E-commerce</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ROCMondriaanTIN/sd23-p07-project-pizza-sopranos-ultrapizza" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Bekijk Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Website -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>Een moderne portfolio website gebouwd met HTML, CSS, Bootstrap en PHP. 
+                            Bevat animaties, responsive design en een interactieve skills sectie.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i> Bekijk Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internship" class="internship-section">
+        <div class="container">
+            <h2 class="section-title text-center">Stage Gezocht</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="internship-content">
+                        <div class="internship-card">
+                            <div class="internship-header">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Software Development Stage</h3>
+                            </div>
+                            <div class="internship-details">
+                                <p class="lead">
+                                    Ik ben momenteel op zoek naar een uitdagende stage in software development 
+                                    waar ik mijn vaardigheden verder kan ontwikkelen en praktijkervaring kan opdoen.
+                                </p>
+                                <div class="internship-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <div>
+                                            <h4>Periode</h4>
+                                            <p>1 september 2025 - 10 april 2026</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <h4>Duur</h4>
+                                            <p>1000 uur, 5 dagen per week</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <h4>Locatie</h4>
+                                            <p>Nederland - omstreken Den Haag</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="internship-skills">
+                                    <h4>Technologieën die ik graag wil leren/verder ontwikkelen:</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">PHP/Symfony</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">HTML/Bootstrap</span>
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">Linux</span>
+                                    </div>
+                                </div>
+                                <div class="internship-downloads">
+                                    <h4>Downloads</h4>
+                                    <div class="download-buttons">
+                                        <a href="CV Bram Verhoeff.pdf" class="btn btn-primary btn-lg download-btn" download>
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Download CV</span>
+                                        </a>
+                                        <a href="informatie voor bedrijf.docx" class="btn btn-outline-light btn-lg download-btn" download>
+                                            <i class="fas fa-file-alt"></i>
+                                            <span>Stage Eisen</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="internship-cta">
+                                    <a href="#contact" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-envelope"></i>
+                                        Neem Contact Op
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-center">Contact</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">Interesse in samenwerking, stage of heb je vragen? Neem contact op!</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>bram.verhoeff@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nederland</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Bram Verhoeff</h5>
+                    <p>17-jarige Developer & Programmer</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/bramverhoeff" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/bramverhoeff" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Bram Verhoeff. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
