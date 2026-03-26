@@ -25,16 +25,29 @@
                         <a class="nav-link" href="#about">Over Mij</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#personal-projects">Persoonlijke Projecten</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#skills">Vaardigheden</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projecten</a>
+                        <a class="nav-link" href="#projects">Schoolprojecten</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#stage">Stage</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/bram-verhoeff/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/bramverhoeff" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -128,6 +141,66 @@
                                         <p>Passie voor Code</p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" class="personal-projects-section">
+        <div class="container">
+            <h2 class="section-title text-center">Mijn Persoonlijke Projecten</h2>
+            <div class="row">
+                <!-- StudyElite -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>StudyElite</h3>
+                            <p>StudyElite is een innovatieve tool waar gebruikers hun taken en projecten kunnen uploaden. De tool analyseert de opdracht en breekt deze automatisch op in makkelijke, behapbare stappen. Dit maakt complexe projecten overzichtelijk en eenvoudiger uitvoerbaar, waardoor studieresultaten verbeteren.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Web Development</span>
+                                <span class="tech-tag">Education</span>
+                                <span class="tech-tag">Innovation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://studyelite.nl/" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Bekijk Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StarReview -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>StarReview</h3>
+                            <div class="development-badge mb-3">
+                                <span class="badge bg-warning text-dark">
+                                    <i class="fas fa-tools"></i> In Development
+                                </span>
+                            </div>
+                            <p>Een gespecialiseerde dienst die bedrijven helpt met het beschermen en verbeteren van hun online reputatie. 
+                            StarReview biedt tools en strategieën voor reputatiemanagement, review monitoring en proactieve online aanwezigheid.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Reputation Management</span>
+                                <span class="tech-tag">Business Services</span>
+                                <span class="tech-tag">Online Marketing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-info-circle"></i> Meer Informatie
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -276,232 +349,196 @@
         </div>
     </section>
 
-<!-- PromptFlow Project Section -->
-<section id="promptflow" class="promptflow-section" style="background-color: #1a1a1a; padding: 100px 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center mb-5">
-                <h2 class="section-title" style="color: #fff;">PromptFlow Project</h2>
-                <p class="lead" style="color: #aaa;">Mijn actieve project naast mijn stage</p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="project-card" style="background: #2a2a2a; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 mb-4 mb-lg-0">
-                            <div class="project-image text-center" style="margin-bottom: 30px;">
-                                <i class="fas fa-bolt" style="font-size: 80px; color: #ff4d4d;"></i>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title text-center">Mijn Schoolprojecten</h2>
+            
+            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <!-- Item 1: Webcatalogus & Build a Game -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Webcatalogus De Brave Bakkers -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Webcatalogus De Brave Bakkers</h3>
+                                        <p>Een webcatalogus voor een bakkerij met productbeheer, bestelsysteem en klantportaal. 
+                                        Volledig responsive design met moderne UI/UX principes.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">PHP</span>
+                                            <span class="tech-tag">Symfony</span>
+                                            <span class="tech-tag">MySQL</span>
+                                            <span class="tech-tag">Bootstrap</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/ROCMondriaanTIN/sd23-p03-project-webcatalogus-de-brave-bakkers" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                <i class="fab fa-github"></i> Bekijk Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 style="color: #fff; margin-bottom: 20px;">PromptFlow</h3>
-                            <p style="color: #bbb; margin-bottom: 25px; line-height: 1.7;">
-                                Een krachtig platform voor het beheren en optimaliseren van AI prompts met een intuïtieve gebruikersinterface en geavanceerde functionaliteiten. Dit project combineert mijn passie voor AI met web development.
-                            </p>
-                            <div class="project-tech" style="margin-bottom: 25px;">
-                                <span style="background: rgba(255, 77, 77, 0.1); color: #ff4d4d; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 10px; margin-bottom: 10px; display: inline-block; border: 1px solid #ff4d4d;">JavaScript</span>
-                                <span style="background: rgba(77, 157, 255, 0.1); color: #4d9dff; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 10px; margin-bottom: 10px; display: inline-block; border: 1px solid #4d9dff;">HTML/CSS</span>
-                                <span style="background: rgba(138, 77, 255, 0.1); color: #8a4dff; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 10px; margin-bottom: 10px; display: inline-block; border: 1px solid #8a4dff;">AI</span>
-                                <span style="background: rgba(255, 193, 77, 0.1); color: #ffc14d; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 10px; margin-bottom: 10px; display: inline-block; border: 1px solid #ffc14d;">UI/UX</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://bramverhoeffbb.github.io/PromptFlow/" target="_blank" class="btn btn-primary" style="margin-right: 10px; background: #ff4d4d; border: none; padding: 10px 25px; border-radius: 30px; font-weight: 600; transition: all 0.3s ease;">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/BramVerhoeffBB/PromptFlow" target="_blank" class="btn btn-outline-light" style="padding: 10px 25px; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; border-color: #666; color: #fff;">
-                                    <i class="fab fa-github"></i> Bekijk Code
-                                </a>
+
+                            <!-- Build a Game -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Build a Game</h3>
+                                        <p>Een interactieve game ontwikkeld met moderne game development technieken. 
+                                        Bevat physics engine, sprite animaties en een level editor systeem.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">Java</span>
+                                            <span class="tech-tag">JavaFX</span>
+                                            <span class="tech-tag">OOP</span>
+                                            <span class="tech-tag">Game Dev</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/ROCMondriaanTIN/sd23-p02-project-build-a-game-bram" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                <i class="fab fa-github"></i> Bekijk Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div style="background: #333; border-radius: 10px; padding: 20px; height: 100%;">
-                                <h4 style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 10px;">Project Highlights</h4>
-                                <ul style="color: #ddd; padding-left: 20px;">
-                                    <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
-                                        <i class="fas fa-check" style="color: #4CAF50; position: absolute; left: 0; top: 5px;"></i>
-                                        Intuïtieve interface voor het beheren van AI prompts
-                                    </li>
-                                    <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
-                                        <i class="fas fa-check" style="color: #4CAF50; position: absolute; left: 0; top: 5px;"></i>
-                                        Geavanceerde zoek- en filteropties
-                                    </li>
-                                    <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
-                                        <i class="fas fa-check" style="color: #4CAF50; position: absolute; left: 0; top: 5px;"></i>
-                                        Responsief ontwerp voor alle apparaten
-                                    </li>
-                                    <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
-                                        <i class="fas fa-check" style="color: #4CAF50; position: absolute; left: 0; top: 5px;"></i>
-                                        Snel en efficiënt systeem
-                                    </li>
-                                </ul>
-                                <div class="mt-4" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-top: 25px;">
-                                    <h5 style="color: #fff; font-size: 1rem; margin-bottom: 10px;">Technische details:</h5>
-                                    <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 0;">
-                                        Gebouwd met moderne webtechnologieën en gericht op gebruikerservaring en prestaties. Het project toont mijn vaardigheden in front-end ontwikkeling en mijn interesse in AI-toepassingen.
-                                    </p>
+                    </div>
+
+                    <!-- Item 2: Dashboard & Escape Room -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Dashboard Project -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Dashboard Bram</h3>
+                                        <p>Een interactief dashboard met real-time data visualisatie en analytics. 
+                                        Bevat verschillende widgets, grafieken en een responsive layout.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">JavaScript</span>
+                                            <span class="tech-tag">HTML</span>
+                                            <span class="tech-tag">CSS</span>
+                                            <span class="tech-tag">Charts.js</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/ROCMondriaanTIN/sd23-p04-project-dashboard-dashboardbram" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                <i class="fab fa-github"></i> Bekijk Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Escape Room -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-door-open"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Escape Room B1J</h3>
+                                        <p>Een digitale escape room game met puzzels, hints en een timer systeem. 
+                                        Interactieve elementen en een spannende game-ervaring.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">HTML</span>
+                                            <span class="tech-tag">CSS</span>
+                                            <span class="tech-tag">JavaScript</span>
+                                            <span class="tech-tag">Game Logic</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/ROCMondriaanTIN/sd23-p02-escaperoom-b1j-dbr" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                <i class="fab fa-github"></i> Bekijk Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Pizza Sopranos & Portfolio Website -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Pizza Sopranos -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-pizza-slice"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Ultra Pizza Sopranos</h3>
+                                        <p>Een pizza bestelsysteem met menu management, bestelverwerking en klantbeheer. 
+                                        Volledig functionele web applicatie voor een pizzeria.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">PHP</span>
+                                            <span class="tech-tag">MySQL</span>
+                                            <span class="tech-tag">Bootstrap</span>
+                                            <span class="tech-tag">E-commerce</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/ROCMondriaanTIN/sd23-p07-project-pizza-sopranos-ultrapizza" target="_blank" class="btn btn-sm btn-outline-primary">
+                                                <i class="fab fa-github"></i> Bekijk Project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Website -->
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <div class="project-card h-100">
+                                    <div class="project-image">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Portfolio Website</h3>
+                                        <p>Een moderne portfolio website gebouwd met HTML, CSS, Bootstrap en PHP. 
+                                        Bevat animaties, responsive design en een interactieve skills sectie.</p>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">HTML</span>
+                                            <span class="tech-tag">CSS</span>
+                                            <span class="tech-tag">Bootstrap</span>
+                                            <span class="tech-tag">PHP</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary">
+                                                <i class="fas fa-eye"></i> Bekijk Live
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title text-center">Mijn Projecten</h2>
-            <div class="row">
-                <!-- Webcatalogus De Brave Bakkers -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Webcatalogus De Brave Bakkers</h3>
-                            <p>Een webcatalogus voor een bakkerij met productbeheer, bestelsysteem en klantportaal. 
-                            Volledig responsive design met moderne UI/UX principes.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">Symfony</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Bootstrap</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ROCMondriaanTIN/sd23-p03-project-webcatalogus-de-brave-bakkers" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Bekijk Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build a Game -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Build a Game</h3>
-                            <p>Een interactieve game ontwikkeld met moderne game development technieken. 
-                            Bevat physics engine, sprite animaties en een level editor systeem.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">JavaFX</span>
-                                <span class="tech-tag">OOP</span>
-                                <span class="tech-tag">Game Dev</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ROCMondriaanTIN/sd23-p02-project-build-a-game-bram" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Bekijk Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dashboard Project -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Dashboard Bram</h3>
-                            <p>Een interactief dashboard met real-time data visualisatie en analytics. 
-                            Bevat verschillende widgets, grafieken en een responsive layout.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Charts.js</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ROCMondriaanTIN/sd23-p04-project-dashboard-dashboardbram" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Bekijk Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Escape Room -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-door-open"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Escape Room B1J</h3>
-                            <p>Een digitale escape room game met puzzels, hints en een timer systeem. 
-                            Interactieve elementen en een spannende game-ervaring.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Game Logic</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ROCMondriaanTIN/sd23-p02-escaperoom-b1j-dbr" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Bekijk Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pizza Sopranos -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-pizza-slice"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Ultra Pizza Sopranos</h3>
-                            <p>Een pizza bestelsysteem met menu management, bestelverwerking en klantbeheer. 
-                            Volledig functionele web applicatie voor een pizzeria.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">E-commerce</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ROCMondriaanTIN/sd23-p07-project-pizza-sopranos-ultrapizza" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Bekijk Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Website -->
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Portfolio Website</h3>
-                            <p>Een moderne portfolio website gebouwd met HTML, CSS, Bootstrap en PHP. 
-                            Bevat animaties, responsive design en een interactieve skills sectie.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">PHP</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-eye"></i> Bekijk Live
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Vorige</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Volgende</span>
+                </button>
             </div>
         </div>
     </section>
