@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <style>
         :root {
-            --bg: #000000;
+            --bg: #0e0d0b;
             --surface: rgba(255,255,255,0.04);
             --surface-hover: rgba(255,255,255,0.07);
             --border: rgba(255,255,255,0.08);
-            --border-hover: rgba(108,99,255,0.5);
-            --accent: #6c63ff;
-            --accent2: #ff6584;
-            --accent3: #43e8d8;
-            --text: #e8e8f0;
-            --muted: #77778a;
+            --border-hover: rgba(212,175,55,0.5);
+            --accent: #d4af37;
+            --accent2: #5eead4;
+            --accent3: #fbbf24;
+            --text: #f2ece2;
+            --muted: #8a8176;
             --radius: 18px;
             --nav-h: 72px;
         }
@@ -48,7 +48,7 @@
             transition: transform 0.1s, width 0.2s, height 0.2s;
             mix-blend-mode: screen;
             animation: cursorPulse 2s ease-in-out infinite, cursorColorShift 3s linear infinite;
-            box-shadow: 0 0 20px rgba(108,99,255,0.8);
+            box-shadow: 0 0 20px rgba(212,175,55,0.8);
         }
         body:has(a:hover) #cursor,
         body:has(button:hover) #cursor { width: 20px; height: 20px; background: var(--accent2); }
@@ -70,9 +70,9 @@
             content: '';
             position: fixed; inset: 0;
             background:
-                    radial-gradient(ellipse 70% 55% at 15% 5%,  rgba(108,99,255,0.16) 0%, transparent 55%),
-                    radial-gradient(ellipse 55% 45% at 85% 85%, rgba(255,101,132,0.10) 0%, transparent 55%),
-                    radial-gradient(ellipse 40% 35% at 75% 10%, rgba(67,232,216,0.07) 0%, transparent 50%);
+                    radial-gradient(ellipse 70% 55% at 15% 5%,  rgba(212,175,55,0.16) 0%, transparent 55%),
+                    radial-gradient(ellipse 55% 45% at 85% 85%, rgba(94,234,212,0.10) 0%, transparent 55%),
+                    radial-gradient(ellipse 40% 35% at 75% 10%, rgba(251,191,36,0.07) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
             animation: blobShift 12s ease-in-out infinite alternate;
@@ -119,7 +119,7 @@
             align-items: center;
             padding: 0 6%;
             backdrop-filter: blur(24px) saturate(180%);
-            background: rgba(7,7,15,0.65);
+            background: rgba(14,13,11,0.65);
             border-bottom: 1px solid var(--border);
             transition: box-shadow 0.3s;
         }
@@ -184,9 +184,9 @@
             font-size: 0.875rem;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(108,99,255,0.3);
+            box-shadow: 0 4px 20px rgba(212,175,55,0.3);
         }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(108,99,255,0.45); }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(212,175,55,0.45); }
 
         .hamburger {
             display: none; flex-direction: column; gap: 5px;
@@ -205,7 +205,7 @@
             display: none;
             position: fixed;
             top: var(--nav-h); left: 0; right: 0;
-            background: rgba(7,7,15,0.97);
+            background: rgba(14,13,11,0.97);
             backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--border);
             padding: 1.5rem 6%;
@@ -346,7 +346,7 @@
             border-radius: 50px; text-decoration: none;
             font-weight: 700; font-size: 0.95rem;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 32px rgba(108,99,255,0.38);
+            box-shadow: 0 8px 32px rgba(212,175,55,0.38);
             border: none; cursor: none;
             position: relative; overflow: hidden;
         }
@@ -358,7 +358,7 @@
             transition: transform 0.4s ease;
         }
         .btn-primary:hover::after { transform: translateX(100%); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(108,99,255,0.52); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(212,175,55,0.52); }
 
         .btn-secondary {
             display: inline-flex; align-items: center; gap: 0.55rem;
@@ -387,7 +387,7 @@
         .social-icon:hover {
             color: var(--accent); border-color: var(--accent);
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(108,99,255,0.3);
+            box-shadow: 0 8px 24px rgba(212,175,55,0.3);
         }
 
         /* Hero 3D card */
@@ -419,7 +419,7 @@
         .hero-card-face::before {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(108,99,255,0.08), transparent 60%, rgba(255,101,132,0.06));
+            background: linear-gradient(135deg, rgba(212,175,55,0.08), transparent 60%, rgba(94,234,212,0.06));
             pointer-events: none;
         }
         .card-chip {
@@ -427,8 +427,8 @@
             font-size: 0.75rem; font-weight: 700;
             letter-spacing: 0.1em; text-transform: uppercase;
             color: var(--accent);
-            background: rgba(108,99,255,0.12);
-            border: 1px solid rgba(108,99,255,0.25);
+            background: rgba(212,175,55,0.12);
+            border: 1px solid rgba(212,175,55,0.25);
             border-radius: 50px; padding: 0.35rem 0.9rem;
             width: fit-content;
         }
@@ -458,9 +458,9 @@
             border: 1px solid var(--border);
             color: var(--muted);
         }
-        .card-tag.a { background: rgba(108,99,255,0.12); color: var(--accent); border-color: rgba(108,99,255,0.3); }
-        .card-tag.b { background: rgba(255,101,132,0.12); color: var(--accent2); border-color: rgba(255,101,132,0.3); }
-        .card-tag.c { background: rgba(67,232,216,0.12); color: var(--accent3); border-color: rgba(67,232,216,0.3); }
+        .card-tag.a { background: rgba(212,175,55,0.12); color: var(--accent); border-color: rgba(212,175,55,0.3); }
+        .card-tag.b { background: rgba(94,234,212,0.12); color: var(--accent2); border-color: rgba(94,234,212,0.3); }
+        .card-tag.c { background: rgba(251,191,36,0.12); color: var(--accent3); border-color: rgba(251,191,36,0.3); }
 
         /* floating orbs on card */
         .orb {
@@ -470,8 +470,8 @@
             pointer-events: none;
             animation: orbFloat 6s ease-in-out infinite alternate;
         }
-        .orb-1 { width:120px;height:120px; background:rgba(108,99,255,0.25); top:-30px; right:-20px; }
-        .orb-2 { width:90px;height:90px; background:rgba(255,101,132,0.2); bottom:-20px; left:-10px; animation-delay:-3s; }
+        .orb-1 { width:120px;height:120px; background:rgba(212,175,55,0.25); top:-30px; right:-20px; }
+        .orb-2 { width:90px;height:90px; background:rgba(94,234,212,0.2); bottom:-20px; left:-10px; animation-delay:-3s; }
         @keyframes orbFloat { from{transform:translateY(0)} to{transform:translateY(-15px)} }
 
         /* ══════════════════════════════
@@ -528,7 +528,7 @@
         .about-avatar-card::before {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(255,101,132,0.08));
+            background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(94,234,212,0.08));
         }
         .about-avatar-card .corner-glow {
             position: absolute;
@@ -536,8 +536,8 @@
             border-radius: 50%;
             filter: blur(50px);
         }
-        .corner-glow.tl { top:-60px; left:-60px; background:rgba(108,99,255,0.3); }
-        .corner-glow.br { bottom:-60px; right:-60px; background:rgba(255,101,132,0.2); }
+        .corner-glow.tl { top:-60px; left:-60px; background:rgba(212,175,55,0.3); }
+        .corner-glow.br { bottom:-60px; right:-60px; background:rgba(94,234,212,0.2); }
 
         .avatar-initials {
             font-size: 9rem;
@@ -556,7 +556,7 @@
 
         .float-badge {
             position: absolute;
-            background: rgba(7,7,15,0.9);
+            background: rgba(14,13,11,0.9);
             border: 1px solid var(--border);
             backdrop-filter: blur(20px);
             border-radius: 16px;
@@ -569,7 +569,7 @@
             font-size: 1.6rem;
             width: 42px; height: 42px;
             border-radius: 12px;
-            background: rgba(108,99,255,0.15);
+            background: rgba(212,175,55,0.15);
             display: flex; align-items: center; justify-content: center;
         }
         .float-badge .badge-text strong {
@@ -595,10 +595,10 @@
         .stat-card::after {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(135deg, transparent, rgba(108,99,255,0.05));
+            background: linear-gradient(135deg, transparent, rgba(212,175,55,0.05));
             opacity: 0; transition: opacity 0.25s;
         }
-        .stat-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(108,99,255,0.15); }
+        .stat-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(212,175,55,0.15); }
         .stat-card:hover::after { opacity: 1; }
         .stat-number {
             font-size: 2.2rem; font-weight: 900;
@@ -630,26 +630,11 @@
             transform: scaleX(0); transform-origin: left;
             transition: transform 0.35s ease;
         }
-        .skill-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 16px 50px rgba(108,99,255,0.18); }
+        .skill-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 16px 50px rgba(212,175,55,0.18); }
         .skill-card:hover::before { transform: scaleX(1); }
         .skill-icon { font-size: 2.4rem; margin-bottom: 1rem; }
         .skill-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .skill-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.3rem; }
-        .skill-bar-wrap { height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
-        .skill-bar {
-            height: 100%; border-radius: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-            width: 0;
-            transition: width 1.3s cubic-bezier(0.4,0,0.2,1);
-            position: relative; overflow: hidden;
-        }
-        .skill-bar::after {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: shimmer 2.5s infinite;
-        }
-        @keyframes shimmer { from{transform:translateX(-100%)} to{transform:translateX(100%)} }
 
         /* ══════════════════════════════
            PROJECTS
@@ -682,7 +667,7 @@
             transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
             display: flex; flex-direction: column;
         }
-        .project-card:hover { border-color: var(--border-hover); transform: translateY(-7px); box-shadow: 0 20px 60px rgba(108,99,255,0.2); }
+        .project-card:hover { border-color: var(--border-hover); transform: translateY(-7px); box-shadow: 0 20px 60px rgba(212,175,55,0.2); }
 
         .project-image {
             height: 200px;
@@ -691,12 +676,12 @@
         }
         .project-image .overlay {
             position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(255,101,132,0.15));
+            background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(94,234,212,0.15));
         }
         .project-image .img-hover-text {
             position: absolute; inset: 0;
             display: flex; align-items: center; justify-content: center;
-            background: rgba(7,7,15,0.8);
+            background: rgba(14,13,11,0.8);
             font-size: 0.9rem; font-weight: 700; color: #fff;
             letter-spacing: 0.08em; text-transform: uppercase;
             opacity: 0; transition: opacity 0.3s;
@@ -710,8 +695,8 @@
             font-size: 0.7rem; font-weight: 700;
             letter-spacing: 0.06em; text-transform: uppercase;
             padding: 0.25rem 0.8rem; border-radius: 50px;
-            background: rgba(108,99,255,0.12);
-            color: var(--accent); border: 1px solid rgba(108,99,255,0.25);
+            background: rgba(212,175,55,0.12);
+            color: var(--accent); border: 1px solid rgba(212,175,55,0.25);
         }
         .project-body h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; }
         .project-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.5rem; flex: 1; }
@@ -721,10 +706,10 @@
             font-size: 0.85rem; font-weight: 600;
             color: var(--accent); text-decoration: none;
             padding: 0.45rem 1rem; border-radius: 50px;
-            border: 1px solid rgba(108,99,255,0.3);
+            border: 1px solid rgba(212,175,55,0.3);
             transition: background 0.2s, color 0.2s;
         }
-        .project-link:hover { background: rgba(108,99,255,0.15); }
+        .project-link:hover { background: rgba(212,175,55,0.15); }
 
         /* ══════════════════════════════
            CONTACT
@@ -745,7 +730,7 @@
         .contact-item:hover { border-color: var(--border-hover); transform: translateX(4px); }
         .contact-item .icon {
             width: 46px; height: 46px; border-radius: 12px;
-            background: rgba(108,99,255,0.14); border: 1px solid rgba(108,99,255,0.25);
+            background: rgba(212,175,55,0.14); border: 1px solid rgba(212,175,55,0.25);
             display: flex; align-items: center; justify-content: center;
             color: var(--accent); font-size: 1rem; flex-shrink: 0;
         }
@@ -781,10 +766,10 @@
         .form-group select:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(108,99,255,0.15);
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
         }
         .form-group textarea { min-height: 140px; }
-        .form-group select option { background: #13131f; }
+        .form-group select option { background: #171512; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
         .form-submit-wrap { position: relative; }
@@ -796,10 +781,10 @@
             border-radius: 50px; border: none; cursor: none;
             font-family: inherit; font-size: 1rem; font-weight: 700;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 32px rgba(108,99,255,0.35);
+            box-shadow: 0 8px 32px rgba(212,175,55,0.35);
             position: relative; overflow: hidden;
         }
-        #submitBtn:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(108,99,255,0.5); }
+        #submitBtn:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(212,175,55,0.5); }
         #submitBtn .btn-loader {
             display: none; width: 18px; height: 18px;
             border: 2px solid rgba(255,255,255,0.3);
@@ -813,7 +798,7 @@
         ══════════════════════════════ */
         #toast {
             position: fixed; bottom: 2rem; right: 2rem;
-            background: rgba(7,7,15,0.95);
+            background: rgba(14,13,11,0.95);
             border: 1px solid rgba(74,222,128,0.4);
             color: #4ade80; font-size: 0.9rem; font-weight: 600;
             padding: 1rem 1.5rem; border-radius: 14px;
@@ -945,9 +930,9 @@
         </h1>
         <p class="typewriter-wrap" id="typewriter"><span class="cursor-blink"></span></p>
         <p class="hero-subtitle">
-            Een gepassioneerde developer die ideeën omzet in
-            krachtige, moderne applicaties. Specialisatie in custom Go High Level automations.
-            Van eerste regel code tot een live product dat gebruikers verblijdt.
+            Vier live producten gebouwd op mijn 18e. Specialist in Go High Level,
+            SaaS-development en e-commerce — van eerste workflow tot volledig live platform
+            dat direct resultaat oplevert.
         </p>
         <div class="hero-buttons">
             <a href="#projects" class="btn-primary">
@@ -956,7 +941,7 @@
             <a href="#contact" class="btn-secondary">
                 <i class="fa-solid fa-envelope"></i> Neem contact op
             </a>
-            <a href="CV Bram Verhoeff.pdf" download class="btn-secondary" style='background:linear-gradient(135deg, rgba(108,99,255,0.15), rgba(255,101,132,0.15)); border-color:var(--accent);'>
+            <a href="CV Bram Verhoeff.pdf" download class="btn-secondary" style='background:linear-gradient(135deg, rgba(212,175,55,0.15), rgba(94,234,212,0.15)); border-color:var(--accent);'>
                 <i class="fa-solid fa-download"></i> Download CV
             </a>
         </div>
@@ -1028,7 +1013,7 @@
         <div class="marquee-item"><i class="fa-solid fa-robot" style="color:#10b981"></i> OpenAI API</div>
         <div class="marquee-item"><i class="fa-brands fa-aws" style="color:#ff9900"></i> AWS</div>
         <div class="marquee-item"><i class="fa-solid fa-mobile-alt" style="color:#007aff"></i> Responsive Design</div>
-        <div class="marquee-item"><i class="fa-solid fa-code-branch" style="color:#6c63ff"></i> REST APIs</div>
+        <div class="marquee-item"><i class="fa-solid fa-code-branch" style="color:#d4af37"></i> REST APIs</div>
         <div class="marquee-item"><i class="fa-solid fa-shield-alt" style="color:#00d084"></i> Web Security</div>
         <!-- duplicated for seamless loop -->
         <div class="marquee-item"><i class="fa-brands fa-html5" style="color:#e34f26"></i> HTML5</div>
@@ -1049,7 +1034,7 @@
         <div class="marquee-item"><i class="fa-solid fa-robot" style="color:#10b981"></i> OpenAI API</div>
         <div class="marquee-item"><i class="fa-brands fa-aws" style="color:#ff9900"></i> AWS</div>
         <div class="marquee-item"><i class="fa-solid fa-mobile-alt" style="color:#007aff"></i> Responsive Design</div>
-        <div class="marquee-item"><i class="fa-solid fa-code-branch" style="color:#6c63ff"></i> REST APIs</div>
+        <div class="marquee-item"><i class="fa-solid fa-code-branch" style="color:#d4af37"></i> REST APIs</div>
         <div class="marquee-item"><i class="fa-solid fa-shield-alt" style="color:#00d084"></i> Web Security</div>
     </div>
 </div>
@@ -1095,20 +1080,20 @@
             </p>
             <div class="about-stats">
                 <div class="stat-card">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">Live producten</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="18">0</div>
+                    <div class="stat-label">Jaar oud</div>
+                </div>
+                <div class="stat-card">
                     <div class="stat-number" data-target="3">0</div>
-                    <div class="stat-label">Jaar ervaring</div>
+                    <div class="stat-label">Sectoren — e-commerce, SaaS, educatie</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-target="10">0</div>
-                    <div class="stat-label">Projecten afgerond</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="5">0</div>
-                    <div class="stat-label">Tevreden klanten</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="1">0</div>
-                    <div class="stat-label">Eigen startup</div>
+                    <div class="stat-number">24u</div>
+                    <div class="stat-label">Reactietijd</div>
                 </div>
             </div>
         </div>
@@ -1127,37 +1112,31 @@
             <div class="skill-icon">🌐</div>
             <h3>Frontend Development</h3>
             <p>HTML, CSS, JavaScript &amp; Bootstrap voor moderne, responsieve webinterfaces.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
         </div>
         <div class="skill-card reveal" style="transition-delay:.1s">
             <div class="skill-icon">⚙️</div>
             <h3>Backend Development</h3>
             <p>PHP, Symfony, Node.js &amp; REST API's voor krachtige server-side applicaties.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
         </div>
         <div class="skill-card reveal" style="transition-delay:.15s">
             <div class="skill-icon">🗂️</div>
             <h3>Database Development</h3>
             <p>MySQL voor database design, queries en datamanagement in webapplicaties.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
         </div>
         <div class="skill-card reveal" style="transition-delay:.2s">
             <div class="skill-icon">🖌️</div>
             <h3>UI/UX Design</h3>
             <p>Figma voor wireframing, prototyping en gebruiksvriendelijke interface designs.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
         </div>
         <div class="skill-card reveal" style="transition-delay:.25s">
             <div class="skill-icon">⚡</div>
             <h3>Go High Level Automations</h3>
             <p>Custom GHL automations, workflow bouwen, API integraties en geavanceerde funnel systemen.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div>
         </div>
         <div class="skill-card reveal" style="transition-delay:.3s">
             <div class="skill-icon">💼</div>
             <h3>Ondernemerschap</h3>
             <p>Product development, growth hacking, custom Go High Level automations en het leiden van een tech-startup.</p>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
         </div>
     </div>
 </section>
@@ -1174,107 +1153,74 @@
         <button class="filter-btn" data-filter="ai">AI</button>
         <button class="filter-btn" data-filter="web">Web</button>
         <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="saas">SaaS</button>
     </div>
     <div class="projects-grid">
-        <div class="project-card reveal" data-cat="ai fullstack">
-            <div class="project-image" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+        <div class="project-card reveal" data-cat="web">
+            <div class="project-image" style="background:linear-gradient(135deg,#1a1208,#0e0d0b)">
                 <div class="overlay"></div>
                 <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                🤖
+                💎
             </div>
             <div class="project-body">
                 <div class="project-tags">
-                    <span class="tag">AI</span><span class="tag">Web</span>
+                    <span class="tag">E-commerce</span><span class="tag">Web</span>
+                </div>
+                <h3>PrimeResell</h3>
+                <p>Exclusief luxe resell platform voor designer horloges en Gucci accessoires. Klanten bestellen via WhatsApp en ontvangen binnen 24-48 uur.</p>
+                <div class="project-links">
+                    <a href="https://www.primeresell.nl/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card reveal" data-cat="ai fullstack saas" style="transition-delay:.1s">
+            <div class="project-image" style="background:linear-gradient(135deg,#0a0d14,#111827)">
+                <div class="overlay"></div>
+                <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
+                🎓
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="tag">AI</span><span class="tag">SaaS</span>
                 </div>
                 <h3>StudyElite</h3>
-                <p>Een innovatieve tool waar gebruikers hun taken en projecten kunnen uploaden om slimmer te studeren.</p>
+                <p>AI-gestuurd studieplannerplatform voor ambitieuze studenten. Helpt gebruikers hun studieplanning optimaliseren met gepersonaliseerde AI-begeleiding.</p>
                 <div class="project-links">
-                    <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    <a href="https://studyelite.nl/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                 </div>
             </div>
         </div>
-        <div class="project-card reveal" data-cat="web" style="transition-delay:.1s">
-            <div class="project-image" style="background:linear-gradient(135deg,#0d1117,#1c2128)">
+        <div class="project-card reveal" data-cat="fullstack web saas" style="transition-delay:.2s">
+            <div class="project-image" style="background:linear-gradient(135deg,#120e02,#1a1508)">
                 <div class="overlay"></div>
                 <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                🍞
+                ⭐
             </div>
             <div class="project-body">
                 <div class="project-tags">
-                    <span class="tag">Web</span><span class="tag">PHP</span>
+                    <span class="tag">SaaS</span><span class="tag">Full-Stack</span>
                 </div>
-                <h3>Bakkerij Webcatalogus</h3>
-                <p>Een webcatalogus voor een bakkerij met productbeheer, bestelsysteem en klantportaal.</p>
+                <h3>StarRate</h3>
+                <p>Alles-in-één reviewmanagement platform voor Nederlandse bedrijven. Verzamelt en analyseert reviews op 50+ platformen met AI-gegenereerde antwoorden.</p>
                 <div class="project-links">
-                    <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal" data-cat="web fullstack" style="transition-delay:.2s">
-            <div class="project-image" style="background:linear-gradient(135deg,#0f2027,#203a43)">
-                <div class="overlay"></div>
-                <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                📊
-            </div>
-            <div class="project-body">
-                <div class="project-tags">
-                    <span class="tag">Dashboard</span><span class="tag">JavaScript</span>
-                </div>
-                <h3>Analytics Dashboard</h3>
-                <p>Een interactief dashboard met real-time data visualisatie en analytics.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    <a href="https://starrate.nl/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                 </div>
             </div>
         </div>
         <div class="project-card reveal" data-cat="web" style="transition-delay:.3s">
-            <div class="project-image" style="background:linear-gradient(135deg,#1a0533,#2d1b69)">
+            <div class="project-image" style="background:linear-gradient(135deg,#0a1208,#0d1a0d)">
                 <div class="overlay"></div>
                 <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                🔐
+                💪
             </div>
             <div class="project-body">
                 <div class="project-tags">
-                    <span class="tag">Web</span><span class="tag">JavaScript</span>
+                    <span class="tag">E-commerce</span><span class="tag">Web</span>
                 </div>
-                <h3>Digitale Escape Room</h3>
-                <p>Een digitale escape room game met puzzels, hints en een timer systeem. Interactieve elementen en een spannende game-ervaring.</p>
+                <h3>Ultravoeding</h3>
+                <p>Nederlandse webshop voor sport- en fitnessupplementen. Gebruiksvriendelijke webshop met een gecureerde selectie van eiwitten, creatine en pre-workout.</p>
                 <div class="project-links">
-                    <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal" data-cat="fullstack" style="transition-delay:.4s">
-            <div class="project-image" style="background:linear-gradient(135deg,#1a0a00,#3d1a00)">
-                <div class="overlay"></div>
-                <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                🍕
-            </div>
-            <div class="project-body">
-                <div class="project-tags">
-                    <span class="tag">Full-Stack</span><span class="tag">PHP</span>
-                </div>
-                <h3>Pizza Bestelsysteem</h3>
-                <p>Een pizza bestelsysteem met menu management, bestelverwerking en klantbeheer.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal" data-cat="web" style="transition-delay:.5s">
-            <div class="project-image" style="background:linear-gradient(135deg,#001a2e,#003d5c)">
-                <div class="overlay"></div>
-                <div class="img-hover-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp;Bekijken</div>
-                🌐
-            </div>
-            <div class="project-body">
-                <div class="project-tags">
-                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span>
-                </div>
-                <h3>Portfolio Website</h3>
-                <p>Een moderne portfolio website gebouwd met HTML, CSS, Bootstrap en PHP.</p>
-                <div class="project-links">
-                    <a href="https://bramverhoeff.nl" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    <a href="https://ultravoeding.nl/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                 </div>
             </div>
         </div>
@@ -1445,7 +1391,7 @@
             if (d.y < 0) d.y = H; if (d.y > H) d.y = 0;
             
             drawShape(d.x, d.y, d.r, d.shape);
-            ctx.fillStyle = `rgba(108,99,255,${d.a})`;
+            ctx.fillStyle = `rgba(212,175,55,${d.a})`;
             ctx.fill();
             
             for (let j = i + 1; j < DOTS; j++) {
@@ -1454,7 +1400,7 @@
                 if (dist < 120) {
                     ctx.beginPath();
                     ctx.moveTo(d.x, d.y); ctx.lineTo(e.x, e.y);
-                    ctx.strokeStyle = `rgba(108,99,255,${0.07 * (1 - dist / 120)})`;
+                    ctx.strokeStyle = `rgba(212,175,55,${0.07 * (1 - dist / 120)})`;
                     ctx.lineWidth = 0.8;
                     ctx.stroke();
                 }
