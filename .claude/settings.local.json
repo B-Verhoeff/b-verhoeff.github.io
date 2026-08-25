@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.primeresell.nl)",
+      "Bash(grep -E \"\\\\.\\(css|scss|js|json\\)$\")",
+      "Bash(curl -s \"https://www.primeresell.nl/\")",
+      "WebFetch(domain:studyelite.nl)",
+      "WebFetch(domain:starrate.nl)",
+      "WebFetch(domain:ultravoeding.nl)"
+    ]
+  }
+}
