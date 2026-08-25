@@ -33,6 +33,122 @@
             overflow-x: hidden;
             cursor: none;
         }
+        body.intro-lock { overflow: hidden; height: 100vh; }
+
+        /* ══════════════════════════════
+           INTRO / BOOT SEQUENCE
+        ══════════════════════════════ */
+        #intro {
+            position: fixed; inset: 0;
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+        }
+        #intro.intro-hidden { display: none; }
+
+        .intro-panel {
+            position: absolute; top: 0; bottom: 0; width: 50%;
+            background: var(--bg);
+            transition: transform 0.95s cubic-bezier(0.76,0,0.24,1);
+            overflow: hidden;
+        }
+        .intro-panel::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 70% 55% at 15% 5%,  rgba(108,99,255,0.16) 0%, transparent 55%),
+                radial-gradient(ellipse 55% 45% at 85% 85%, rgba(255,101,132,0.10) 0%, transparent 55%);
+        }
+        .intro-panel-l { left: 0; }
+        .intro-panel-r { right: 0; }
+        #intro.intro-exit .intro-panel-l { transform: translateX(-100%); }
+        #intro.intro-exit .intro-panel-r { transform: translateX(100%); }
+
+        .intro-content {
+            position: relative; z-index: 2;
+            text-align: center;
+            transition: opacity 0.45s ease, transform 0.45s ease;
+        }
+        #intro.intro-exit .intro-content { opacity: 0; transform: translateY(-24px) scale(0.94); }
+
+        .intro-logo-wrap {
+            font-size: clamp(3.5rem, 9vw, 6.5rem);
+            font-weight: 900; letter-spacing: -0.03em;
+            display: flex; justify-content: center; gap: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        .intro-logo-letter, .intro-logo-dot {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, var(--accent3) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0; transform: translateY(50px) rotateX(-90deg);
+            animation: introLetterIn 0.7s cubic-bezier(0.2,0.8,0.2,1) forwards, gradShift 4s ease infinite alternate;
+        }
+        .intro-logo-letter:nth-child(1) { animation-delay: 0.1s, 0s; }
+        .intro-logo-letter:nth-child(2) { animation-delay: 0.2s, 0s; }
+        .intro-logo-dot { animation-delay: 0.32s, 0s; color: var(--accent2); }
+        @keyframes introLetterIn {
+            0% { opacity: 0; transform: translateY(50px) rotateX(-90deg); }
+            100% { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        .intro-tagline {
+            font-size: 0.9rem; font-weight: 600;
+            letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--muted);
+            opacity: 0;
+            animation: fadeUp 0.6s 0.55s ease both;
+            margin-bottom: 2.75rem;
+        }
+
+        .intro-bar-track {
+            width: min(280px, 60vw); height: 3px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 3px; overflow: hidden;
+            margin: 0 auto 1rem;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.7s ease both;
+        }
+        .intro-bar-fill {
+            height: 100%; width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+            border-radius: 3px;
+        }
+
+        .intro-meta {
+            display: flex; align-items: center; justify-content: space-between;
+            width: min(280px, 60vw); margin: 0 auto;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.75s ease both;
+        }
+        .intro-status {
+            font-size: 0.72rem; color: var(--muted);
+            font-family: 'Courier New', monospace;
+        }
+        .intro-percent {
+            font-size: 0.8rem; font-weight: 700; color: var(--accent3);
+            font-family: 'Courier New', monospace;
+            min-width: 2.6em; text-align: right;
+        }
+
+        .intro-skip {
+            position: absolute; top: 2rem; right: 2rem; z-index: 3;
+            background: transparent; border: 1px solid var(--border);
+            color: var(--muted); font-family: inherit;
+            font-size: 0.78rem; font-weight: 600;
+            padding: 0.5rem 1.1rem; border-radius: 50px;
+            display: flex; align-items: center; gap: 0.5rem;
+            cursor: none;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.9s ease both;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .intro-skip:hover { border-color: var(--accent); color: var(--text); }
+
+        @media (max-width: 600px) {
+            .intro-skip { top: 1.25rem; right: 1.25rem; }
+        }
 
         /* ══════════════════════════════
            CUSTOM CURSOR
@@ -896,6 +1012,24 @@
 </head>
 <body>
 
+<!-- INTRO -->
+<div id="intro">
+    <div class="intro-panel intro-panel-l"></div>
+    <div class="intro-panel intro-panel-r"></div>
+    <button class="intro-skip" id="introSkip">Overslaan <i class="fa-solid fa-forward"></i></button>
+    <div class="intro-content">
+        <div class="intro-logo-wrap">
+            <span class="intro-logo-letter">B</span><span class="intro-logo-letter">V</span><span class="intro-logo-dot">.</span>
+        </div>
+        <p class="intro-tagline">Software Developer</p>
+        <div class="intro-bar-track"><div class="intro-bar-fill" id="introBarFill"></div></div>
+        <div class="intro-meta">
+            <span class="intro-status" id="introStatus">Assets laden...</span>
+            <span class="intro-percent" id="introPercent">0%</span>
+        </div>
+    </div>
+</div>
+
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 <div id="progress-bar"></div>
@@ -1370,6 +1504,60 @@
 </footer>
 
 <script>
+    // ══ INTRO / BOOT SEQUENCE ══
+    (function initIntro() {
+        const intro   = document.getElementById('intro');
+        if (!intro) return;
+        const fill    = document.getElementById('introBarFill');
+        const percent = document.getElementById('introPercent');
+        const status  = document.getElementById('introStatus');
+        const skipBtn = document.getElementById('introSkip');
+
+        document.body.classList.add('intro-lock');
+
+        const statuses = [
+            'Assets laden...',
+            'Componenten initialiseren...',
+            'Animaties voorbereiden...',
+            'Bijna klaar...'
+        ];
+
+        let done = false;
+        function finishIntro() {
+            if (done) return;
+            done = true;
+            intro.classList.add('intro-exit');
+            document.body.classList.remove('intro-lock');
+            setTimeout(() => intro.classList.add('intro-hidden'), 1000);
+        }
+
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) { finishIntro(); return; }
+
+        const duration = 2100;
+        const easeOutExpo = t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+        let start = null;
+
+        function tick(ts) {
+            if (!start) start = ts;
+            const t = Math.min((ts - start) / duration, 1);
+            const val = easeOutExpo(t) * 100;
+
+            fill.style.width = val + '%';
+            percent.textContent = Math.floor(val) + '%';
+            status.textContent = statuses[Math.min(Math.floor(t * statuses.length), statuses.length - 1)];
+
+            if (t < 1) {
+                requestAnimationFrame(tick);
+            } else {
+                setTimeout(finishIntro, 350);
+            }
+        }
+        requestAnimationFrame(tick);
+
+        skipBtn.addEventListener('click', finishIntro);
+    })();
+
     // ══ CURSOR ══
     const cursor = document.getElementById('cursor');
     const ring   = document.getElementById('cursor-ring');
